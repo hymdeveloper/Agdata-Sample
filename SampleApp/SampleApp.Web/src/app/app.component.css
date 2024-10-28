@@ -1,0 +1,88 @@
+/* Basic styling for the form container */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Input styling */
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Error message styling */
+  small {
+    color: #d9534f; /* Bootstrap red for errors */
+    font-size: 0.8rem;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: 48%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Reset button styling */
+  .reset-button {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  
+  .reset-button:hover {
+    background-color: #e2e6ea;
+  }
+  
+  /* Button layout */
+  button + button {
+    margin-left: 4%;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form field container */
+  div {
+    margin-bottom: 20px;
+  }
+  
+  /* Highlight border when input has an error */
+  input.ng-invalid.ng-touched {
+    border-color: #d9534f; /* Red for invalid fields */
+  }
+  

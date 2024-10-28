@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" required />
+    <div *ngIf="form.get('name')?.errors && form.get('name')?.touched">
+      <small *ngIf="form.get('name')?.errors?.['required']">Name is required.</small>
+      <small *ngIf="form.get('name')?.errors?.['minlength']">Name must be at least 3 characters long.</small>
+      <small *ngIf="form.get('name')?.errors?.['maxlength']">Name cannot be more than 50 characters long.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="address">Address:</label>
+    <input id="address" formControlName="address" />
+    <div *ngIf="form.get('address')?.errors && form.get('address')?.touched">
+      <small *ngIf="form.get('address')?.errors?.['minlength']">Address must be at least 10 characters long.</small>
+      <small *ngIf="form.get('address')?.errors?.['maxlength']">Address cannot be more than 100 characters long.</small>
+    </div>
+  </div>
+
+  <button type="submit">Submit</button>
+  <button type="button" (click)="onReset()" class="reset-button">Reset</button>
+</form>
